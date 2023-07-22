@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+  <!-- Demo styles -->
+  <style>
+    html{
+      height: -webkit-fill-available;   
+    }
+
+    body {
+      position: relative;
+      height: -webkit-fill-available;
+      /*background-image: url(./images/close-up-film-texture-details.jpg);
+      background-position: center;
+      background-size: cover;*/
+  
+    }
+
+    body {
+      background-color: rgb(255, 255, 255);
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: rgb(204, 133, 28);
+      margin: 0;
+      padding: 0;
+    }
+
+    .main{
+
+    width: 100%;
+    height: 100%;
+    padding-top: 0.5rem;
+    background-color: black;
+    }
+    /*@media (max-width: 600px) {
+      .main{
+        height: 90%;
+      }}*/
+
+    .swiper {
+      max-width: 100%;
+      border: 1px solid rgb(0, 0, 0);
+      margin-top: 0.5rem;
+    }
+
+    .swiper-slide {
+    max-width: 200px;
+    height: 150px;
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+
+    }
+
+    .swiper-image{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+    }
+    .parallax-bg {
+      position: absolute;
+      left: 0;
+      top: 21px;
+      width: 110%;
+      height: 70.7%;
+      filter: grayscale();
+      /*filter: contrast(100%);*/
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+
+    }
+    .film{
+      height: 100%;
+      max-width: 100%;
+      background-size: 100% 100%;
+      /*background-color: rgba(156, 64, 64, 0.055);*/
+      z-index: 1;
+    }
+
+    .swiper:nth-child(2)
+    .swiper-slide{
+      position: relative;
+      right: 50px;
+    }
+    .swiper:nth-child(2){
+      rotate: 0.3deg;
+    }
+
+    .swiper:nth-child(3)
+    .swiper-slide{
+      position: relative;
+      right: 20px;
+    }
+
+    .swiper:nth-child(4)
+    .swiper-slide{
+      position: relative;
+      right: 37px;
+    }
+
+    @media (min-width: 600px) {
+    .swiper:nth-child(5) {
+display: none;
+rotate: 0.3deg;
+}
+}
+
+    /*.swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }*/
+
+.footer{
+  margin-bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'IBM Plex Mono', Helvetica, Arial, sans-serif;
+  color: black;
+  font-weight: bold;
+
+}
+@media (min-width: 600px) {
+    .footer {
+display: none;
+}
+}
+  </style>
+</head>
+
+<body>
+<div class="main">
+ <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=1);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=2);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=3);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=4);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=5);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=6);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=7);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+    <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=8);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=9);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=10);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=11);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=12);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=13);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=14);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=15);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=16);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+    <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=17);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=18);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=19);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=20);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=21);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=22);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=23);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=24);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=25);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+    <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=26);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=27);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=28);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=29);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=30);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=31);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=32);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=33);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=34);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+    <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=35);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=36);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=37);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=38);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=39);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=40);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=41);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=42);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=43);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+    <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=44);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="swiper-image" >
+          <div class="film"  style="
+          background-image: url(./images/film2.png);"></div>
+          <div class="parallax-bg" style="
+          background-image: url(https://picsum.photos/200/300?random=45);
+          " data-swiper-parallax="7%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="footer">
+  <div class="text">About</div>
+  <div class="text">links</div>
+  <div class="text">more info</div>
+
+</div>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      parallax: true,
+      loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      freeMode: true,
+      mousewheel: {
+    releaseOnEdges: true,
+      },
+      grabCursor: true,
+    });
+  </script>
+</body>
+
+</html>
